@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221129 11:37:00.394" rpa="false" schemaversion="3">
+<suite id="s1" name="LoginTestNegativeUsername" source="c:\Users\52337\OneDrive\Bureau\Travaux Pratique\testCases\LoginTestNegativeUsername.robot">
+<test id="s1-t1" name="Login_Test_NegativeUsername" line="13">
+<kw name="Ouvrir le navigateur" library="Negative username test">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>ce mot cle permet d`ouvrir l`application sous Test</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221129 11:37:00.613" level="INFO">Opening browser 'gc' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<status status="PASS" starttime="20221129 11:37:00.611" endtime="20221129 11:37:02.660"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221129 11:37:02.661" endtime="20221129 11:37:02.786"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221129 11:37:04.801" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221129 11:37:02.786" endtime="20221129 11:37:04.801"/>
+</kw>
+<status status="PASS" starttime="20221129 11:37:00.611" endtime="20221129 11:37:04.801"/>
+</kw>
+<kw name="Remplir formulaire de login" library="Negative username test">
+<arg>${userInCorrect}</arg>
+<arg>${password}</arg>
+<doc>ce mot cle permet de remplir le formulaire de login</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_UserName}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221129 11:37:04.804" level="INFO">Typing text 'stu' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20221129 11:37:04.803" endtime="20221129 11:37:04.884"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221129 11:37:04.885" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20221129 11:37:04.923" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221129 11:37:04.970" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221129 11:37:04.884" endtime="20221129 11:37:04.970"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221129 11:37:04.971" level="INFO">Clicking button 'xpath=//*[@id='submit']'.</msg>
+<status status="PASS" starttime="20221129 11:37:04.970" endtime="20221129 11:37:05.032"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221129 11:37:08.046" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221129 11:37:05.032" endtime="20221129 11:37:08.046"/>
+</kw>
+<status status="PASS" starttime="20221129 11:37:04.802" endtime="20221129 11:37:08.047"/>
+</kw>
+<kw name="Verifier error message est affichee" library="Negative username test">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class=show</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221129 11:37:08.075" level="INFO">Element 'class=show' is displayed.</msg>
+<status status="PASS" starttime="20221129 11:37:08.048" endtime="20221129 11:37:08.075"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${ErrorMessage}</var>
+<arg>${link_ErrorMessage}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221129 11:37:08.099" level="INFO">${ErrorMessage} = Your username is invalid!</msg>
+<status status="PASS" starttime="20221129 11:37:08.075" endtime="20221129 11:37:08.099"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>message error:</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221129 11:37:08.100" level="INFO">message error:</msg>
+<status status="PASS" starttime="20221129 11:37:08.100" endtime="20221129 11:37:08.100"/>
+</kw>
+<status status="PASS" starttime="20221129 11:37:08.048" endtime="20221129 11:37:08.100"/>
+</kw>
+<kw name="Verifier le texte error message" library="Negative username test">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Lbl_Text__Error_username}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221129 11:37:08.117" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
+<status status="PASS" starttime="20221129 11:37:08.103" endtime="20221129 11:37:08.118"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221129 11:37:10.123" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221129 11:37:08.118" endtime="20221129 11:37:10.123"/>
+</kw>
+<status status="PASS" starttime="20221129 11:37:08.101" endtime="20221129 11:37:10.123"/>
+</kw>
+<kw name="Fermer les fenetres des navigateurs" library="Negative username test">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221129 11:37:10.125" endtime="20221129 11:37:12.321"/>
+</kw>
+<status status="PASS" starttime="20221129 11:37:10.124" endtime="20221129 11:37:12.321"/>
+</kw>
+<tag>negative</tag>
+<status status="PASS" starttime="20221129 11:37:00.610" endtime="20221129 11:37:12.322"/>
+</test>
+<status status="PASS" starttime="20221129 11:37:00.401" endtime="20221129 11:37:12.325"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">negative</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginTestNegativeUsername">LoginTestNegativeUsername</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
